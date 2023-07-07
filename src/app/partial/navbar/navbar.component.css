@@ -365,6 +365,10 @@ nav .navBottom ul li a:hover {
     white-space: nowrap;
   }
 
+  nav .navMid .sideNav{
+    width: 80vw;
+  }
+
 }
 
 @media only screen and (max-width: 321px) {
