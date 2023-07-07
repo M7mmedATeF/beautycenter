@@ -1,0 +1,127 @@
+.promos {
+  background-color: var(--pink-color);
+  background-image: url('/assets/header.svg');
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 2.5em;
+  text-align: right;
+  padding: 10px 5em;
+  font-family: "Alhurra";
+  font-size: 18px;
+}
+
+.promos h6 {
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.promos span {
+  background-color: #fff;
+  padding: 5px 20px;
+  margin: 0 5px;
+  border-radius: 15px;
+}
+
+.promos span.code {
+  color: var(--primary-color);
+}
+
+.joinMail {
+  will-change: opacity;
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  z-index: 3;
+  background-color: var(--main-bg);
+  padding: 2rem 2rem;
+  max-width: 18vw;
+  text-align: center;
+  box-shadow: 5px 5px 20px #0000001d;
+  border-radius: 20px;
+  font-family: "Alhurra";
+  opacity: 1;
+  transition: 0.3s opacity ease-out;
+}
+
+.joinMail.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.joinMail p:nth-child(2){
+  margin: 20px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.joinMail .mail{
+  background-image: linear-gradient(90deg, rgba(239, 38, 122, 1), rgba(255, 124, 134, 1));
+  border-radius: 10px;
+  padding: 1.5px 2px;
+}
+
+.joinMail .mail input{
+  width: 100%;
+  text-align: center;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.joinMail button.send{
+  font-family: "Alhurra";
+  background-image: linear-gradient(90deg, rgba(239, 38, 122, 1), rgba(255, 124, 134, 1));
+  width: 100%;
+  padding: 10px;
+  font-size: 11px;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.joinMail button.refuse{
+  font-family: "Alhurra";
+  background-color: transparent;
+  color: #999;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 10px;
+}
+
+.joinMail .socialLinks a {
+  color: #000;
+  margin: 0 2.5px;
+}
+
+@media only screen and (max-width: 769px) {
+  .promos h6 {
+    font-size: 1.2rem;
+  }
+  .promos p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .promos {
+    padding: 0 2rem;
+    flex-direction: column-reverse;
+  }
+
+  .promos div{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .promos h6 {
+    font-size: 1rem;
+  }
+}

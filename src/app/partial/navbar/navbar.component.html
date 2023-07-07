@@ -1,0 +1,105 @@
+<nav>
+    <div class="navTop">
+        <div class="textLine">
+          <div class="socialLinks">
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="promo">
+            <p>شحن مجاني لجميع الطلبات تسوق الآن</p>
+            <p>خصومات وكوبونات</p>
+          </div>
+        </div>
+        <div class="country">
+            <img src="assets/icons/location.svg" alt="" srcset="">
+            <img src="assets/icons/saudia.svg" alt="" srcset="">
+            <span>
+              التوصيل إلي
+              <span>
+                الرياض
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+              <ul>
+                <li>جدة</li>
+                <li>الرياض</li>
+              </ul>
+            </span>
+        </div>
+    </div>
+
+    <div class="navMid">
+      <div class="logo">
+        <img src="assets/logo/logo.svg" alt="logo">
+      </div>
+
+      <div class="toggleBTN">
+        <button (click)="togleNav(sideNav)"><i class="fa-solid fa-bars"></i></button>
+      </div>
+
+      <div class="sideContainer hide" #sideNav>
+        <div class="overlay" (click)="togleNav(sideNav)"></div>
+        <div class="sideNav">
+          <div class="search">
+            <div class="searchBar">
+              <input type="text" name="search" placeholder="ابحث...">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+    
+          <div class="helpers">
+            <a href="#">
+              <img src="assets/icons/user.svg">
+              <span class="headline">تسجيل دخول</span>
+            </a>
+            <a href="#">
+              <img src="assets/icons/cart.svg">
+              <span class="headline">سلة التسوق</span>
+              <span class="counter">
+                <span>3</span>
+              </span>
+            </a>
+            <a href="#">
+              <img src="assets/icons/heart.svg" class="single">
+              <span class="headline hide">المفضلة</span>
+              <span class="counter">
+                <span>5</span>
+              </span>
+            </a>
+            <a href="#">
+              <img src="assets/icons/global.svg" class="single">
+              <span class="headline hide">عام</span>
+            </a>
+            <a href="#">
+              <img src="assets/icons/callcenter.svg">
+              <span class="headline">خدمة العملاء</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="navBottom">
+      <ul>
+        <li><a href="#">بيع في بيوتي</a></li>
+        <li><a href="#">خصومات وعروض</a></li>
+        <li><a href="#">مستلزمات كبار السن</a></li>
+        <li><a href="#">المنزل والديكور</a></li>
+        <li><a href="#">الكترونيات</a></li>
+        <li><a href="#">حلي واكسسوارات</a></li>
+        <li><a href="#">ساعات نسائية</a></li>
+        <li><a href="#">نظارات شمسية وطبية</a></li>
+        <li><a href="#">أحذية</a></li>
+        <li><a href="#">شنط</a></li>
+        <li><a href="#">العناية الشخصية والجمال</a></li>
+        <li><a href="#">لك ولطفلك</a></li>
+        <li><a href="#">ملابس نسائية</a></li>
+      </ul>
+    </div>
+</nav>

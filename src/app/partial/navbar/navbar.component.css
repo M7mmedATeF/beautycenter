@@ -1,0 +1,378 @@
+nav {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+nav> div {
+  padding: 10px 5em;
+}
+
+nav .navTop {
+  background-color: var(--secondary-bg);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+nav .navTop .textLine {
+  font-family: "Alhurra";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .navTop .textLine a {
+  will-change: color;
+  color: var(--secondary-color);
+  margin: 0 2.5px;
+  transition: 0.2s color ease-in;
+}
+
+nav .navTop .textLine a:hover {
+  color: var(--primary-color);
+}
+
+nav .navTop .promo {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+nav .navTop .promo p:first-child {
+  font-size: 1.2em;
+  color: var(--secondary-color);
+}
+
+nav .navTop .promo p:last-child {
+  font-size: 0.8em;
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+nav .navTop .country {
+  direction: rtl;
+  min-width: max-content;
+}
+
+nav .navTop .country img {
+  margin: 0 5px;
+}
+
+nav .navTop .country > span {
+  margin: 0 5px;
+  position: relative;
+}
+
+nav .navTop .country > span span {
+  color: var(--light-color);
+}
+
+nav .navTop .country > span span i {
+  will-change: transform;
+  color: var(--secondary-color);
+  transition: 0.2s transform ease-in-out;
+}
+
+nav .navTop .country ul {
+  will-change: opacity, pointer-events;
+  display: block;
+  z-index: 2;
+  position: absolute;
+  right: 50%;
+  list-style: none;
+  padding: 5px 0;
+  background-color: var(--main-bg);
+  box-shadow: 5px 5px 10px #00000011;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s opacity ease-in-out;
+}
+
+nav .navTop .country ul li {
+  will-change: background-color, color;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+nav .navTop .country ul li:hover {
+  background-color: var(--light-color);
+  color: var(--secondary-color);
+}
+
+nav .navTop .country > span:hover ul {
+  opacity: 1;
+  pointer-events: all;
+}
+
+nav .navTop .country > span:hover i {
+  transform: rotate(180deg);
+}
+
+nav .navMid{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  column-gap: 10px;
+}
+
+nav .navMid .sideNav{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 10px;
+}
+
+nav .navMid .logo img{
+  height: 63px;
+}
+
+nav .navMid .searchBar {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--primary-color);
+  padding: 0 15px;
+}
+
+nav .navMid .searchBar i{
+  will-change: color;
+  font-size: 20px;
+  color: #999;
+  transition: 0.3s color ease-out;
+}
+
+nav .navMid .searchBar input {
+  width: 100%;
+  font-size: 24px;
+  padding: 10px 10px 10px 0;
+  direction: rtl;
+  border: none;
+}
+
+nav .navMid .searchBar input:focus + i {
+  color: var(--primary-color);
+}
+
+nav .navMid .helpers {
+  direction: rtl;
+}
+
+nav .navMid .helpers a {
+  position: relative;
+  color: var(--secondary-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 5px;
+}
+
+nav .navMid .toggleBTN{
+  display: none;
+}
+
+nav .navMid .sideNav .helpers a span.hide{
+  display: none;
+}
+
+nav .navMid .helpers a img {
+  margin-left: 5px;
+  width: 22px;
+}
+
+nav .navMid .helpers a img.single {
+  margin-left: 0px;
+}
+
+nav .navMid .helpers a .counter {
+  width: 25px;
+  height: 25px;
+  background-color: #fb718152;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform: translate(50%,-50%);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+nav .navMid .helpers a .counter span {
+  width: 20px;
+  height: 20px;
+  background-color: var(--light-color);
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--main-bg);
+}
+
+nav .navBottom {
+  background-color: var(--pink-color);
+  overflow-x: scroll;
+}
+
+nav .navBottom ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-align: right;
+}
+
+nav .navBottom ul li a {
+  will-change: color;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--navLight-color);
+  font-family: "Alhurra";
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.3s color ease-out;
+  white-space: nowrap;
+}
+
+nav .navBottom ul li a:hover {
+  color: var(--secondary-color);
+}
+
+
+
+
+@media only screen and (max-width: 769px) {
+  nav{
+    font-size: 11px;
+  }
+
+  nav .navBottom {
+    padding: 10px 0.5rem;
+  }
+
+  nav .navBottom ul a{
+    margin: 0 10px;
+  }
+
+  nav .navMid{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav .navMid .toggleBTN{
+    display: block;
+    text-align: right;
+  }
+
+  nav .navMid .toggleBTN button{
+    font-size: 3em;
+    padding: 0 0 0 20px;
+    background-color: transparent;
+    border: none;
+  }
+
+  nav .navMid .overlay{
+    will-change: opacity;
+    background-color: #00000072;
+    position: fixed;
+    inset: 0;
+    z-index: 11;
+    transition: 0.3s opacity ease-in-out;
+  }
+
+  nav .navMid .sideNav{
+    will-change: right;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: -5px 0 20px #0000003c;
+    height: 100vh;
+    width: 50vw;
+    overflow-y: scroll;
+    padding: 20px;
+    z-index: 12;
+    flex-direction: column;
+    transition: 0.3s right ease-in-out;
+  }
+
+  nav .navMid .sideContainer.hide .sideNav{
+    right: -100%;
+  }
+
+  nav .navMid .sideContainer.hide .overlay{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  nav .navMid .sideNav .search{
+    margin-bottom: 20px;
+  }
+
+  nav .navMid .sideNav .helpers{
+    text-align: right;
+    font-size: 3em;
+    display: grid;
+    width: 100%;
+  }
+
+  nav .navMid .sideNav .helpers a{
+    display: block;
+    padding: 20px 0;
+  }
+
+  nav .navMid .sideNav .helpers a span.headline{
+    margin-right: 20px;
+  }
+
+  nav .navMid .sideNav .helpers a span.hide{
+    display: inline-block;
+  }
+
+  nav .navMid .sideNav .helpers a .counter{
+    top: 30%;
+  }
+
+  nav .navMid .logo img{
+    height: 43px;
+  }
+
+  nav .navTop .socialLinks{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+
+  
+  nav> div {
+    padding: 10px 2.5em;
+  }
+
+  nav .navTop .textLine {
+    font-size: 0.8em;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  nav .navTop .country img {
+    width: 20px;
+  }
+
+  nav .navTop .country span {
+    white-space: nowrap;
+  }
+
+}
+
+@media only screen and (max-width: 321px) {
+
+  nav .navTop .textLine {
+    display: none;
+  }
+  nav .navTop {
+    grid-template-columns: 1fr;
+  }
+}

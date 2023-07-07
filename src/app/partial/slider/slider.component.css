@@ -1,0 +1,171 @@
+.sliderViewer{
+  position: relative;
+  max-width: 100vw;
+  min-height: 550px;
+  overflow: hidden;
+}
+
+.sliderViewer > div{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sliderViewer > button{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  z-index: 3;
+  font-size: 36px;
+  padding: 10px 20px;
+  background-color: transparent;
+  transform: translateY(-50%);
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.sliderViewer > button.next {
+  left: auto;
+  right: 5%;
+}
+
+.sliderViewer .slides{
+  will-change: left;
+  background-color: var(--pink-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  transition: 0.5s left ease-in-out;
+}
+
+.sliderViewer .slides .slide{
+  padding: 0 0;
+  min-width: 100vw;
+  min-height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+}
+
+.sliderViewer .slides .slide img{
+  height: 100%;
+}
+
+.sliderViewer .slides .slide .txt{
+  height: 450px;
+  background-color: var(--secondary-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliderViewer .slides .slide .txt .inner{
+  background-color: var(--main-bg);
+  display: inline-block;
+  padding: 4rem 3rem;
+  text-align: right;
+  max-width: 60%;
+  box-shadow: 0 5px 20px #0000001a;
+  font-family: "Alhurra";
+}
+
+.sliderViewer .slides .slide .txt .inner h1{
+  font-size: 3.2rem;
+  color: var(--primary-color);
+  font-weight: 200;
+}
+
+.sliderViewer .slides .slide .txt .inner h2{
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.sliderViewer .bullets{
+  position: absolute;
+  top: auto;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 0 0.2em;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+.sliderViewer .bullets button{
+  position: static;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #d6d6d61b;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.sliderViewer .bullets button.active{
+  background-color: var(--primary-color);
+}
+
+@media only screen and (max-width: 769px) {
+
+  .sliderViewer{
+    position: relative;
+    max-width: 100vw;
+    min-height: 800px;
+    overflow: hidden;
+  }
+
+  .sliderViewer .slides .slide{
+    grid-template-columns: 1fr;
+  }
+
+  .sliderViewer .slides .slide .img{
+    text-align: center;
+    height: 350px;
+  }
+
+  .sliderViewer .slides .slide .txt{
+    height: 450px;
+    background-color: var(--secondary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sliderViewer .slides .slide .txt .inner{
+    background-color: var(--main-bg);
+    display: inline-block;
+    padding: 4rem 3rem;
+    text-align: right;
+    max-width: 60%;
+    box-shadow: 0 5px 20px #0000001a;
+    font-family: "Alhurra";
+  }
+}
+
+@media only screen and (max-width: 427px) {
+  .sliderViewer .slides .slide .txt .inner{
+    padding: 4rem 3rem;
+    max-width: 80%;
+  }
+  .sliderViewer .slides .slide .txt .inner h1{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 200;
+  }
+  
+  .sliderViewer .slides .slide .txt .inner h2{
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 10px;
+  }
+}

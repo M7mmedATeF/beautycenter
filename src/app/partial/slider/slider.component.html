@@ -1,0 +1,25 @@
+<section class="sliderContainer">
+  <div class="sliderViewer">
+    <ul class="slides" #slider>
+      <li class="slide" *ngFor="let slide of slides">
+        <div class="img">
+          <img src="{{slide.img}}">
+        </div>
+        <div class="txt">
+          <div class="inner">
+            <h1>{{slide.txt.headline}}</h1>
+            <h2>{{slide.txt.secondary}}</h2>
+            <p>{{slide.txt.details}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <button class="next" (click)="goNext(slider)"><i class="fa-solid fa-angle-right"></i></button>
+    <button class="prev" (click)="goPrev(slider)"><i class="fa-solid fa-angle-left"></i></button>
+
+    <div class="bullets">
+      <button [class]=" (counter == active)? 'active': '' " (click)="bulletClick(slider, counter)" *ngFor="let counter of bullets"></button>
+    </div>
+  </div>
+</section>

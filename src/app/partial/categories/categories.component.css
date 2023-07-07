@@ -1,0 +1,50 @@
+.categories{
+  padding: 5em;
+}
+
+.categories h4{
+  text-align: right;
+  font-size: 28px;
+  font-family: "Alhurra";
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.categories .content{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.categories .content .item{
+  text-decoration: none;
+}
+
+.categories .content .item img{
+  width: 100%;
+}
+
+.categories .content .item p{
+  font-size: 1.5em;
+  font-family: "Alhurra";
+  text-align: center;
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 426px) {
+
+  .categories{
+    padding: 1.5em;
+  }
+
+  .categories .content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+@media only screen and (max-width: 321px) {
+  .categories .content{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
